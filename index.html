@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<!--
+  介護施設・医療事務クリニック・児童発達支援施設の3社、生成AI活用研修アンケートの実施報告LP。
+  受講者の声はアンケート原文からそのまま抜粋しています(氏名はアルファベットで匿名化済み)。
+  数値スコアは各社アンケート(5点満点/一部10点満点)に基づく実データです。
+-->
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>介護現場のAI活用研修 | 受講者の声とデータで見る効果</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF8F2; --surface:#FFFFFF; --text:#3B4D42; --text-soft:#82927E;
+  --accent:#E29368; --teal:#7CB0A2; --border:#EAE6D8; --chip:#F3EFE1;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1B2620; --surface:#233128; --text:#EDF2E9; --text-soft:#A9BBA5;
+    --accent:#EDA378; --teal:#8FC2B4; --border:#374A3E; --chip:#293A2F;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1B2620; --surface:#233128; --text:#EDF2E9; --text-soft:#A9BBA5;
+  --accent:#EDA378; --teal:#8FC2B4; --border:#374A3E; --chip:#293A2F;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Zen Kaku Gothic New',sans-serif;line-height:1.8;}
+h1,h2,.disp{font-family:'Zen Maru Gothic',sans-serif;}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px;}
+a{color:inherit;}
+img{max-width:100%;}
+
+header{padding:22px 0;border-bottom:1px solid var(--border);}
+.headbar{display:flex;justify-content:space-between;align-items:center;}
+.brand{font-family:'Zen Maru Gothic',sans-serif;font-size:19px;letter-spacing:.02em;}
+.cta-btn{background:var(--accent);color:#fff;padding:10px 20px;border-radius:3px;text-decoration:none;font-size:14px;white-space:nowrap;}
+
+.hero{padding:64px 0 40px;}
+.hero-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:44px;align-items:center;}
+.hero h1{font-size:clamp(28px,4vw,40px);font-weight:700;line-height:1.55;margin:0 0 18px;}
+.hero p.lead{color:var(--text-soft);font-size:16px;margin:0 0 28px;max-width:42ch;}
+.quote-card{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--teal);padding:28px 26px;border-radius:2px;}
+.quote-card p{font-size:17px;margin:0 0 12px;}
+.quote-card .who{color:var(--text-soft);font-size:13px;}
+
+.stat-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--surface);}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);}
+.stat-item{padding:26px 20px;text-align:center;border-right:1px solid var(--border);}
+.stat-item:last-child{border-right:none;}
+.stat-num{font-family:'Zen Maru Gothic',sans-serif;font-size:32px;color:var(--teal);}
+.stat-label{color:var(--text-soft);font-size:13px;margin-top:4px;}
+
+section{padding:56px 0;}
+h2{font-size:24px;font-weight:700;margin:0 0 8px;}
+.section-sub{color:var(--text-soft);font-size:14px;margin:0 0 32px;}
+
+.overview{display:grid;grid-template-columns:1fr 1.3fr;gap:40px;}
+.overview p{color:var(--text-soft);font-size:15px;}
+.timeline{border-left:2px solid var(--border);padding-left:20px;}
+.tl-item{position:relative;padding-bottom:22px;}
+.tl-item:last-child{padding-bottom:0;}
+.tl-item::before{content:attr(data-n);position:absolute;left:-33px;top:0;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center;}
+.tl-item .tl-title{font-weight:700;font-size:15px;}
+.tl-item .tl-desc{color:var(--text-soft);font-size:13.5px;}
+
+.change-box{background:var(--surface);border:1px solid var(--border);border-radius:3px;padding:32px;}
+.bar-row{margin-bottom:18px;}
+.bar-row .bar-label{display:flex;justify-content:space-between;font-size:14px;margin-bottom:6px;}
+.bar-track{background:var(--chip);border-radius:2px;height:14px;overflow:hidden;}
+.bar-fill{height:100%;border-radius:2px;background:var(--teal);}
+.bar-fill.after{background:var(--accent);}
+.change-note{color:var(--text-soft);font-size:13.5px;margin-top:16px;}
+
+.chips{display:flex;flex-wrap:wrap;gap:10px;}
+.chip{background:var(--chip);border:1px solid var(--border);padding:8px 16px;border-radius:20px;font-size:14px;}
+
+.testimonials{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.t-card{background:var(--surface);border:1px solid var(--border);padding:22px;border-radius:2px;}
+.t-card p{font-size:14.5px;margin:0 0 10px;}
+.t-card .who{color:var(--text-soft);font-size:12.5px;}
+
+.callout{background:var(--chip);border:1px solid var(--border);border-radius:3px;padding:30px 32px;}
+.callout h2{font-size:19px;}
+.callout p{color:var(--text-soft);font-size:14.5px;margin:0;}
+
+.cta-final{text-align:center;padding:60px 0 70px;}
+.cta-final h2{font-size:26px;}
+.cta-final p{color:var(--text-soft);max-width:38ch;margin:12px auto 26px;}
+
+footer{border-top:1px solid var(--border);padding:26px 0;color:var(--text-soft);font-size:13px;}
+
+@media (max-width:760px){
+  .hero-grid,.overview,.testimonials{grid-template-columns:1fr;}
+  .stat-grid{grid-template-columns:1fr;}
+  .stat-item{border-right:none;border-bottom:1px solid var(--border);}
+  .stat-item:last-child{border-bottom:none;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap headbar">
+    <div class="brand">UX-HATCH AI活用研修</div>
+    <a class="cta-btn" href="#contact">導入について相談する</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>介護現場が、生成AIと<br>少しずつ距離を縮めた2日間。</h1>
+      <p class="lead">介護施設・医療クリニック・児童発達支援施設。3つの現場、31名が受講した生成AI活用研修。アンケートに寄せられた生の声とデータから、現場にAIを届けるとどうなるかをそのままお伝えします。</p>
+      <a class="cta-btn" href="#contact">資料・詳細を問い合わせる</a>
+    </div>
+    <div class="quote-card">
+      <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="var(--accent)" stroke-width="1.8" style="margin-bottom:10px;"><path d="M21 12c0 4.4-4 8-9 8-1.2 0-2.3-.2-3.3-.5L3 21l1.3-3.9C3.5 15.9 3 14 3 12c0-4.4 4-8 9-8s9 3.6 9 8z"/></svg>
+      <p>「小さなことからでも実践することでAIとの距離感を短くしていくことが大事だと感じました。」</p>
+      <div class="who">受講者(介護施設職員)</div>
+    </div>
+  </div>
+</section>
+
+<div class="stat-strip">
+  <div class="wrap stat-grid">
+    <div class="stat-item">
+      <div class="stat-num">31名</div>
+      <div class="stat-label">受講者(全員が最終回まで参加)</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">3社</div>
+      <div class="stat-label">介護・医療事務・児童発達支援で導入</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">4.1<span style="font-size:16px;">/5</span></div>
+      <div class="stat-label">総合満足度(3社合算・加重平均)</div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>導入実績</h2>
+    <p class="section-sub">業種は異なりますが、いずれも「日々の記録・文書作成に時間がかかる」という共通の課題を持つ現場です。</p>
+    <div class="testimonials" style="grid-template-columns:repeat(3,1fr);">
+      <div class="t-card">
+        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="var(--teal)" stroke-width="1.7" style="margin-bottom:8px;"><path d="M12 20s-7-4.35-9.5-8.5C1 8 2.5 4.5 6 4.5c2 0 3.5 1.2 4 2.5.5-1.3 2-2.5 4-2.5 3.5 0 5 3.5 3.5 7C19 15.65 12 20 12 20z"/></svg>
+        <div class="who" style="font-size:13px;margin-bottom:6px;">介護施設</div>
+        <p style="font-size:20px;font-family:'Zen Maru Gothic',sans-serif;margin:0 0 6px;">13名・2日間</p>
+        <p style="font-size:13.5px;">総合満足度 3.5/5。支援計画書や記録作成へのAI活用を中心に実施。</p>
+      </div>
+      <div class="t-card">
+        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="var(--teal)" stroke-width="1.7" style="margin-bottom:8px;"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
+        <div class="who" style="font-size:13px;margin-bottom:6px;">医療事務クリニック</div>
+        <p style="font-size:20px;font-family:'Zen Maru Gothic',sans-serif;margin:0 0 6px;">13名・3日間</p>
+        <p style="font-size:13.5px;">総合満足度 4.4/5。メール対応や院内連絡の効率化を中心に実施。</p>
+      </div>
+      <div class="t-card">
+        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="var(--teal)" stroke-width="1.7" style="margin-bottom:8px;"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="8.5" y="14" width="7" height="7" rx="1.5"/></svg>
+        <div class="who" style="font-size:13px;margin-bottom:6px;">児童発達支援施設</div>
+        <p style="font-size:20px;font-family:'Zen Maru Gothic',sans-serif;margin:0 0 6px;">5名・3日間</p>
+        <p style="font-size:13.5px;">総合満足度 5.0/5。療育記録や保護者向け文書の作成を中心に実施。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="overview">
+  <div class="wrap overview" style="display:contents;">
+  <div>
+    <h2>研修の概要</h2>
+    <p class="section-sub">介護施設の職員を対象に、日々の業務にAIをどう取り入れるかを段階的に体験する研修です。</p>
+    <p>個別支援計画書の作成、議事録・記録のまとめ、Excelを使った集計、案内文やチラシ作成など、介護現場で実際に発生する業務を題材にしています。座学だけでなく、その場でAIを触りながら「自分の業務ならどう使えるか」を考える時間を重視しました。</p>
+  </div>
+  <div class="timeline">
+    <div class="tl-item" data-n="1"><div class="tl-title">第1回:業務の棚卸しとAIへの第一歩</div><div class="tl-desc">普段の業務内容を整理し、AIへの期待や不安を確認</div></div>
+    <div class="tl-item" data-n="2"><div class="tl-title">第2回:実践ワーク</div><div class="tl-desc">資料・案内物などの作成を実際に体験</div></div>
+    <div class="tl-item" data-n="3"><div class="tl-title">第3回:基本操作と議事録作成</div><div class="tl-desc">生成AIの基本操作、会議記録の作成に応用</div></div>
+    <div class="tl-item" data-n="4"><div class="tl-title">第4回:応用ワーク</div><div class="tl-desc">難易度を上げた実践課題に挑戦</div></div>
+    <div class="tl-item" data-n="5"><div class="tl-title">第5回(Day2):現場業務への落とし込み</div><div class="tl-desc">Excel活用、個別支援計画書、総合振り返り</div></div>
+  </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>受講後の変化</h2>
+    <p class="section-sub">医療事務クリニック・児童発達支援施設(18名)に、研修前と比べてAI活用イメージがどう変わったか(5点満点)を尋ねました。</p>
+    <div class="change-box">
+      <div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;">
+        <div style="font-family:'Zen Maru Gothic',sans-serif;font-size:44px;color:var(--accent);white-space:nowrap;">100%</div>
+        <div style="color:var(--text-soft);font-size:14px;max-width:34ch;">が「イメージが変わった」(4点以上)と回答。うち13名は5点満点中5点でした。</div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(9,1fr);gap:6px;margin-top:22px;max-width:420px;">
+        <!-- 18 respondents: 13 rated 5(dark), 5 rated 4(light) -->
+        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
+        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
+        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
+        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
+        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
+        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
+        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
+        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
+        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
+        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
+        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
+        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
+        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
+        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
+        <svg viewBox="0 0 16 16" width="100%" fill="var(--teal)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
+        <svg viewBox="0 0 16 16" width="100%" fill="var(--teal)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
+        <svg viewBox="0 0 16 16" width="100%" fill="var(--teal)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
+        <svg viewBox="0 0 16 16" width="100%" fill="var(--teal)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
+        <svg viewBox="0 0 16 16" width="100%" fill="var(--teal)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
+      </div>
+      <div style="display:flex;gap:18px;margin-top:12px;font-size:12.5px;color:var(--text-soft);">
+        <span>■ 5点(大きく変わった):13名</span><span>■ 4点:5名</span>
+      </div>
+      <div class="change-note">介護施設では、受講前後で期待度が上昇した方(5名)・変わらなかった方(6名)・下がった方(2名)が分かれ、現場や職種によって変化の実感には差があることも分かりました。</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>現場で生まれた活用アイデア</h2>
+    <p class="section-sub">受講者自身の言葉で挙がった「AIを使って効率化したい業務」の一部です(3社合計20種類以上)。</p>
+    <div class="chips">
+      <span class="chip">個別支援計画書・療育記録の作成</span>
+      <span class="chip">議事録・会議記録の作成</span>
+      <span class="chip">Excel・スプレッドシートの集計</span>
+      <span class="chip">メール対応(Gmail)</span>
+      <span class="chip">案内文・チラシ・掲示物作成</span>
+      <span class="chip">音声データからの記録作成</span>
+      <span class="chip">保護者・利用者向け文書</span>
+      <span class="chip">マニュアル整理(NotebookLM)</span>
+      <span class="chip">院内・社内チャットでの情報共有</span>
+      <span class="chip">スケジュール・シフト管理</span>
+      <span class="chip">アンケート集計・分析</span>
+      <span class="chip">SNS投稿・画像作成</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>受講者の声</h2>
+    <p class="section-sub">アンケートの自由記述から、そのままご紹介します。</p>
+    <div class="testimonials">
+      <div class="t-card"><svg viewBox="0 0 16 16" width="26" height="26" fill="var(--teal)" style="margin-bottom:8px;"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><p>「これまで使っていなかったことを後悔するくらいとてもためになりました。」</p><div class="who">受講者(介護施設)</div></div>
+      <div class="t-card"><svg viewBox="0 0 16 16" width="26" height="26" fill="var(--accent)" style="margin-bottom:8px;"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><p>「知らなかった使い方を知れたり、こんなことまで出来るんだと思うことがいっぱいで、AIってすごいなと改めて感じました。」</p><div class="who">受講者(児童発達支援施設)</div></div>
+      <div class="t-card"><svg viewBox="0 0 16 16" width="26" height="26" fill="var(--teal)" style="margin-bottom:8px;"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><p>「業務で実際に活用できることが見つかったので、大変有意義な研修でした。」</p><div class="who">受講者(医療事務クリニック)</div></div>
+      <div class="t-card"><svg viewBox="0 0 16 16" width="26" height="26" fill="var(--accent)" style="margin-bottom:8px;"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><p>「占いやMBTIなど好きなものでAIの使い方を学べたので、難しいと思うことがなく楽しく学べました。」</p><div class="who">受講者(児童発達支援施設)</div></div>
+      <div class="t-card"><svg viewBox="0 0 16 16" width="26" height="26" fill="var(--teal)" style="margin-bottom:8px;"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><p>「後半はワークショップが多く、楽しく学ぶことができました。」</p><div class="who">受講者(医療事務クリニック)</div></div>
+      <div class="t-card"><svg viewBox="0 0 16 16" width="26" height="26" fill="var(--accent)" style="margin-bottom:8px;"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><p>「chatgptとgeminiしか知らなかったが、色々な種類がある事を知りました。」</p><div class="who">受講者(介護施設)</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap callout">
+    <h2>導入をご検討の企業様へ</h2>
+    <p>3社の結果を比べると、もともとPCやITツールに慣れている現場ほど満足度が高く出る傾向がありました。PC操作に不安のある方が多い現場では、「操作についていくのが大変だった」という声も一部にありましたが、そうした方からも「実践すれば時短になる」「活用の幅を知れた」といった前向きな感想が寄せられています。事前のPCスキル差を踏まえたグループ分けや進行ペースの調整を行うことで、より高い効果が期待できます。</p>
+  </div>
+</section>
+
+<section class="cta-final" id="contact">
+  <div class="wrap">
+    <h2>貴社の現場に合わせた研修プランをご提案します</h2>
+    <p>職種・PCスキル・業務内容に応じて内容をカスタマイズできます。まずはお気軽にご相談ください。</p>
+    <a class="cta-btn" href="https://business.form-mailer.jp/fms/1636c50f256052?_gl=1*k0kifn*_gcl_au*MjA3ODg1MTU0Ny4xNzg5NjkyMTEw" target="_blank" rel="noopener">お問合せはこちら</a>
+  </div>
+</section>
+
+<section style="padding:50px 0 20px;">
+  <div class="wrap">
+    <h2 style="font-size:20px;">会社概要</h2>
+    <div style="border-top:1px solid var(--border);margin-top:18px;">
+      <div style="display:flex;flex-wrap:wrap;padding:14px 0;border-bottom:1px solid var(--border);"><div style="width:140px;color:var(--text-soft);font-size:14px;">会社名</div><div style="font-size:14px;">株式会社UX-HATCH</div></div>
+      <div style="display:flex;flex-wrap:wrap;padding:14px 0;border-bottom:1px solid var(--border);"><div style="width:140px;color:var(--text-soft);font-size:14px;">代表</div><div style="font-size:14px;">山本博行</div></div>
+      <div style="display:flex;flex-wrap:wrap;padding:14px 0;border-bottom:1px solid var(--border);"><div style="width:140px;color:var(--text-soft);font-size:14px;">設立</div><div style="font-size:14px;">2020年7月</div></div>
+      <div style="display:flex;flex-wrap:wrap;padding:14px 0;border-bottom:1px solid var(--border);"><div style="width:140px;color:var(--text-soft);font-size:14px;">所在地</div><div style="font-size:14px;">〒542-0076<br>大阪市中央区難波5-1-60 なんばスカイオ27F</div></div>
+      <div style="display:flex;flex-wrap:wrap;padding:14px 0;"><div style="width:140px;color:var(--text-soft);font-size:14px;">会社HP</div><div style="font-size:14px;"><a href="https://hatch8.co.jp/" target="_blank" rel="noopener" style="color:var(--teal);">https://hatch8.co.jp/</a></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">株式会社UX-HATCH / 生成AI活用研修 実施報告</div>
+</footer>
+
+</body>
+</html>
