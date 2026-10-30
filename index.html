@@ -100,6 +100,13 @@ footer{border-top:1px solid var(--border);padding:26px 0;color:var(--text-soft);
   .stat-item{border-right:none;border-bottom:1px solid var(--border);}
   .stat-item:last-child{border-bottom:none;}
 }
+.wrap:not(.callout) > h2,.wrap:not(.callout) > .section-sub{text-align:center;}
+.chips{justify-content:center;}
+.change-note{text-align:center;}
+.cta-note{max-width:520px;margin:0 auto;background:var(--surface);border:1px solid var(--border);border-top:4px solid var(--accent);border-radius:3px;padding:26px 24px;text-align:center;}
+.cta-note svg{margin-bottom:8px;}
+.cta-note-t{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:18px;margin-bottom:6px;}
+.cta-note-d{color:var(--text-soft);font-size:14px;}
 </style>
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -114,7 +121,7 @@ footer{border-top:1px solid var(--border);padding:26px 0;color:var(--text-soft);
 <header>
   <div class="wrap headbar">
     <div class="brand">UX-HATCH AI活用研修</div>
-    <a class="cta-btn" href="#contact">導入について相談する</a>
+    <a class="cta-btn" href="#contact">メールでご相談</a>
   </div>
 </header>
 
@@ -123,7 +130,7 @@ footer{border-top:1px solid var(--border);padding:26px 0;color:var(--text-soft);
     <div>
       <h1>介護現場が、生成AIと<br>少しずつ距離を縮めた2日間。</h1>
       <p class="lead">介護施設・医療クリニック・児童発達支援施設。3つの現場、31名が受講した生成AI活用研修。アンケートに寄せられた生の声とデータから、現場にAIを届けるとどうなるかをそのままお伝えします。</p>
-      <a class="cta-btn" href="#contact">資料・詳細を問い合わせる</a>
+      <a class="cta-btn" href="#contact">メールへの返信で相談する</a>
     </div>
     <div class="quote-card">
       <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="var(--accent)" stroke-width="1.8" style="margin-bottom:10px;"><path d="M21 12c0 4.4-4 8-9 8-1.2 0-2.3-.2-3.3-.5L3 21l1.3-3.9C3.5 15.9 3 14 3 12c0-4.4 4-8 9-8s9 3.6 9 8z"/></svg>
@@ -156,7 +163,7 @@ footer{border-top:1px solid var(--border);padding:26px 0;color:var(--text-soft);
     <p class="section-sub">業種は異なりますが、いずれも「日々の記録・文書作成に時間がかかる」という共通の課題を持つ現場です。</p>
     <div class="testimonials" style="grid-template-columns:repeat(3,1fr);">
       <div class="t-card">
-        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="var(--teal)" stroke-width="1.7" style="margin-bottom:8px;"><path d="M12 20s-7-4.35-9.5-8.5C1 8 2.5 4.5 6 4.5c2 0 3.5 1.2 4 2.5.5-1.3 2-2.5 4-2.5 3.5 0 5 3.5 3.5 7C19 15.65 12 20 12 20z"/></svg>
+        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="var(--teal)" stroke-width="1.7" style="margin-bottom:8px;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
         <div class="who" style="font-size:13px;margin-bottom:6px;">介護施設</div>
         <p style="font-size:20px;font-family:'Zen Maru Gothic',sans-serif;margin:0 0 6px;">13名・2日間</p>
         <p style="font-size:13.5px;">総合満足度 3.5/5。支援計画書や記録作成へのAI活用を中心に実施。</p>
@@ -202,11 +209,11 @@ footer{border-top:1px solid var(--border);padding:26px 0;color:var(--text-soft);
     <h2>受講後の変化</h2>
     <p class="section-sub">医療事務クリニック・児童発達支援施設(18名)に、研修前と比べてAI活用イメージがどう変わったか(5点満点)を尋ねました。</p>
     <div class="change-box">
-      <div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;">
+      <div style="display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;">
         <div style="font-family:'Zen Maru Gothic',sans-serif;font-size:44px;color:var(--accent);white-space:nowrap;">100%</div>
         <div style="color:var(--text-soft);font-size:14px;max-width:34ch;">が「イメージが変わった」(4点以上)と回答。うち13名は5点満点中5点でした。</div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(9,1fr);gap:6px;margin-top:22px;max-width:420px;">
+      <div style="display:grid;grid-template-columns:repeat(9,1fr);gap:6px;margin:22px auto 0;max-width:420px;">
         <!-- 18 respondents: 13 rated 5(dark), 5 rated 4(light) -->
         <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
         <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
@@ -221,14 +228,13 @@ footer{border-top:1px solid var(--border);padding:26px 0;color:var(--text-soft);
         <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
         <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
         <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
-        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
         <svg viewBox="0 0 16 16" width="100%" fill="var(--teal)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
         <svg viewBox="0 0 16 16" width="100%" fill="var(--teal)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
         <svg viewBox="0 0 16 16" width="100%" fill="var(--teal)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
         <svg viewBox="0 0 16 16" width="100%" fill="var(--teal)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
         <svg viewBox="0 0 16 16" width="100%" fill="var(--teal)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
       </div>
-      <div style="display:flex;gap:18px;margin-top:12px;font-size:12.5px;color:var(--text-soft);">
+      <div style="display:flex;justify-content:center;gap:18px;margin-top:12px;font-size:12.5px;color:var(--text-soft);">
         <span>■ 5点(大きく変わった):13名</span><span>■ 4点:5名</span>
       </div>
       <div class="change-note">介護施設では、受講前後で期待度が上昇した方(5名)・変わらなかった方(6名)・下がった方(2名)が分かれ、現場や職種によって変化の実感には差があることも分かりました。</div>
@@ -283,14 +289,18 @@ footer{border-top:1px solid var(--border);padding:26px 0;color:var(--text-soft);
   <div class="wrap">
     <h2>貴社の現場に合わせた研修プランをご提案します</h2>
     <p>職種・PCスキル・業務内容に応じて内容をカスタマイズできます。まずはお気軽にご相談ください。</p>
-    <a class="cta-btn" href="https://business.form-mailer.jp/fms/1636c50f256052?_gl=1*k0kifn*_gcl_au*MjA3ODg1MTU0Ny4xNzg5NjkyMTEw" target="_blank" rel="noopener">お問合せはこちら</a>
+    <div class="cta-note">
+      <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18v12H3zM3 7l9 7 9-7"/></svg>
+      <div class="cta-note-t">ご案内のメールに、そのままご返信ください</div>
+      <div class="cta-note-d">研修の内容や進め方など、ご質問だけでも構いません。</div>
+    </div>
   </div>
 </section>
 
 <section style="padding:50px 0 20px;">
   <div class="wrap">
     <h2 style="font-size:20px;">会社概要</h2>
-    <div style="border-top:1px solid var(--border);margin-top:18px;">
+    <div style="border-top:1px solid var(--border);margin:18px auto 0;max-width:640px;">
       <div style="display:flex;flex-wrap:wrap;padding:14px 0;border-bottom:1px solid var(--border);"><div style="width:140px;color:var(--text-soft);font-size:14px;">会社名</div><div style="font-size:14px;">株式会社UX-HATCH</div></div>
       <div style="display:flex;flex-wrap:wrap;padding:14px 0;border-bottom:1px solid var(--border);"><div style="width:140px;color:var(--text-soft);font-size:14px;">代表</div><div style="font-size:14px;">山本博行</div></div>
       <div style="display:flex;flex-wrap:wrap;padding:14px 0;border-bottom:1px solid var(--border);"><div style="width:140px;color:var(--text-soft);font-size:14px;">設立</div><div style="font-size:14px;">2020年7月</div></div>
