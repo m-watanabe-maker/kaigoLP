@@ -1,112 +1,145 @@
 <!DOCTYPE html>
 <!--
-  介護施設・医療事務クリニック・児童発達支援施設の3社、生成AI活用研修アンケートの実施報告LP。
-  受講者の声はアンケート原文からそのまま抜粋しています(氏名はアルファベットで匿名化済み)。
-  数値スコアは各社アンケート(5点満点/一部10点満点)に基づく実データです。
+  介護・福祉向け 生成AI研修LP(法人本部向け A-1)
+  受講者の声・数値はアンケート原文に基づきます。実際の受講企業名は掲載していません。
+  計測: Microsoft Clarity(既存)+ data-track / data-view によるカスタムイベント
 -->
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>介護現場のAI活用研修 | 受講者の声とデータで見る効果</title>
+<title>介護・福祉向け 生成AI研修 | 実施事例と受講後の変化</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#FAF8F2; --surface:#FFFFFF; --text:#3B4D42; --text-soft:#82927E;
-  --accent:#E29368; --teal:#7CB0A2; --border:#EAE6D8; --chip:#F3EFE1;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#1B2620; --surface:#233128; --text:#EDF2E9; --text-soft:#A9BBA5;
-    --accent:#EDA378; --teal:#8FC2B4; --border:#374A3E; --chip:#293A2F;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#1B2620; --surface:#233128; --text:#EDF2E9; --text-soft:#A9BBA5;
-  --accent:#EDA378; --teal:#8FC2B4; --border:#374A3E; --chip:#293A2F;
-}
+:root{--bg:#FAF8F2;--surface:#FFFFFF;--text:#3B4D42;--text-soft:#82927E;--accent:#E29368;--teal:#7CB0A2;--border:#EAE6D8;--chip:#F3EFE1;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#1B2620;--surface:#233128;--text:#EDF2E9;--text-soft:#A9BBA5;--accent:#EDA378;--teal:#8FC2B4;--border:#374A3E;--chip:#293A2F;}}
+:root[data-theme="dark"]{--bg:#1B2620;--surface:#233128;--text:#EDF2E9;--text-soft:#A9BBA5;--accent:#EDA378;--teal:#8FC2B4;--border:#374A3E;--chip:#293A2F;}
 *{box-sizing:border-box;}
 body{margin:0;background:var(--bg);color:var(--text);font-family:'Zen Kaku Gothic New',sans-serif;line-height:1.8;}
-h1,h2,.disp{font-family:'Zen Maru Gothic',sans-serif;}
+h1,h2,h3,.disp{font-family:'Zen Maru Gothic',sans-serif;}
 .wrap{max-width:1040px;margin:0 auto;padding:0 24px;}
 a{color:inherit;}
-img{max-width:100%;}
-
 header{padding:22px 0;border-bottom:1px solid var(--border);}
-.headbar{display:flex;justify-content:space-between;align-items:center;}
-.brand{font-family:'Zen Maru Gothic',sans-serif;font-size:19px;letter-spacing:.02em;}
-.cta-btn{background:var(--accent);color:#fff;padding:10px 20px;border-radius:3px;text-decoration:none;font-size:14px;white-space:nowrap;}
-
-.hero{padding:64px 0 40px;}
-.hero-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:44px;align-items:center;}
-.hero h1{font-size:clamp(28px,4vw,40px);font-weight:700;line-height:1.55;margin:0 0 18px;}
-.hero p.lead{color:var(--text-soft);font-size:16px;margin:0 0 28px;max-width:42ch;}
-.quote-card{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--teal);padding:28px 26px;border-radius:2px;}
-.quote-card p{font-size:17px;margin:0 0 12px;}
-.quote-card .who{color:var(--text-soft);font-size:13px;}
-
+.headbar{display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.brand{font-family:'Zen Maru Gothic',sans-serif;font-size:19px;}
+.cta-btn{display:inline-block;background:var(--accent);color:#fff;padding:11px 22px;border-radius:3px;text-decoration:none;font-size:14.5px;}
+.cta-btn.sub{background:transparent;color:var(--text);border:1px solid var(--border);}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px;}
+.hero{padding:60px 0 40px;}
+.hero-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:44px;align-items:center;}
+.hero h1{font-size:clamp(24px,3.1vw,32px);line-height:1.6;margin:0 0 18px;}
+.hero .lead{color:var(--text-soft);font-size:15.5px;margin:0 0 12px;}
+.hero .btn-row{margin-top:24px;}
+.navcard{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--teal);padding:24px;border-radius:2px;}
+.navcard .t{font-size:13px;color:var(--text-soft);margin-bottom:10px;}
+.navcard ol{margin:0;padding:0;list-style:none;counter-reset:n;}
+.navcard li{counter-increment:n;padding:9px 0;border-top:1px solid var(--border);font-size:15px;}
+.navcard li:first-child{border-top:none;}
+.navcard li::before{content:counter(n);display:inline-flex;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;font-size:12px;align-items:center;justify-content:center;margin-right:10px;}
+.navcard a{text-decoration:none;}
 .stat-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--surface);}
 .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);}
 .stat-item{padding:26px 20px;text-align:center;border-right:1px solid var(--border);}
 .stat-item:last-child{border-right:none;}
-.stat-num{font-family:'Zen Maru Gothic',sans-serif;font-size:32px;color:var(--teal);}
-.stat-label{color:var(--text-soft);font-size:13px;margin-top:4px;}
-
+.stat-num{font-family:'Zen Maru Gothic',sans-serif;font-size:30px;color:var(--teal);line-height:1.4;}
+.stat-label{font-size:14px;margin-top:2px;}
+.stat-cap{color:var(--text-soft);font-size:12.5px;margin-top:2px;}
 section{padding:56px 0;}
-h2{font-size:24px;font-weight:700;margin:0 0 8px;}
-.section-sub{color:var(--text-soft);font-size:14px;margin:0 0 32px;}
-
-.overview{display:grid;grid-template-columns:1fr 1.3fr;gap:40px;}
-.overview p{color:var(--text-soft);font-size:15px;}
-.timeline{border-left:2px solid var(--border);padding-left:20px;}
-.tl-item{position:relative;padding-bottom:22px;}
-.tl-item:last-child{padding-bottom:0;}
-.tl-item::before{content:attr(data-n);position:absolute;left:-33px;top:0;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center;}
-.tl-item .tl-title{font-weight:700;font-size:15px;}
-.tl-item .tl-desc{color:var(--text-soft);font-size:13.5px;}
-
-.change-box{background:var(--surface);border:1px solid var(--border);border-radius:3px;padding:32px;}
-.bar-row{margin-bottom:18px;}
-.bar-row .bar-label{display:flex;justify-content:space-between;font-size:14px;margin-bottom:6px;}
-.bar-track{background:var(--chip);border-radius:2px;height:14px;overflow:hidden;}
-.bar-fill{height:100%;border-radius:2px;background:var(--teal);}
-.bar-fill.after{background:var(--accent);}
-.change-note{color:var(--text-soft);font-size:13.5px;margin-top:16px;}
-
-.chips{display:flex;flex-wrap:wrap;gap:10px;}
+.wrap:not(.callout)>h2,.wrap>.section-sub{text-align:center;}
+h2{font-size:24px;margin:0 0 8px;}
+.section-sub{color:var(--text-soft);font-size:14px;margin:0 auto 32px;max-width:60ch;}
+.cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px;align-items:stretch;}
+.case{background:var(--surface);border:1px solid var(--border);border-radius:3px;padding:22px;display:flex;flex-direction:column;gap:14px;}
+.case-head{display:flex;gap:14px;align-items:center;padding-bottom:14px;border-bottom:1px solid var(--border);}
+.case-head svg{width:36px;height:36px;flex:none;}
+.case-tag{font-size:12px;color:var(--accent);font-weight:700;letter-spacing:.08em;}
+.case h3{margin:0;font-size:19px;line-height:1.4;}
+.case-meta{color:var(--text-soft);font-size:13px;}
+.blk .lb{font-size:12.5px;font-weight:700;color:var(--text-soft);margin-bottom:4px;}
+.blk .lb small{font-weight:400;margin-left:6px;}
+.blk p,.blk li{font-size:14px;line-height:1.75;margin:0;}
+.blk ul{margin:0;padding-left:1.2em;}
+.blk.do .lb{color:var(--teal);}
+.blk.res .lb{color:var(--accent);}
+.blk.nx{border-top:1px dashed var(--border);padding-top:12px;}
+blockquote{margin:10px 0 0;padding:10px 12px;background:var(--chip);border-radius:2px;font-size:13.5px;line-height:1.75;}
+.banner{background:var(--chip);border:1px solid var(--border);border-radius:3px;padding:22px 26px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-top:28px;}
+.banner b{font-family:'Zen Maru Gothic',sans-serif;font-size:16.5px;}
+.banner small{display:block;color:var(--text-soft);font-size:13px;}
+.change-box{background:var(--surface);border:1px solid var(--border);border-radius:3px;padding:32px;text-align:center;}
+.big{font-family:'Zen Maru Gothic',sans-serif;font-size:40px;color:var(--accent);line-height:1.4;}
+.big small{font-size:18px;color:var(--text);margin-left:6px;}
+.ppl{display:grid;grid-template-columns:repeat(9,1fr);gap:6px;margin:22px auto 0;max-width:420px;}
+.ppl svg{width:100%;}
+.legend{display:flex;justify-content:center;gap:18px;margin-top:12px;font-size:12.5px;color:var(--text-soft);flex-wrap:wrap;}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;}
+.note{color:var(--text-soft);font-size:13px;margin:16px auto 0;max-width:62ch;text-align:left;}
+.sub-h{text-align:center;font-family:'Zen Maru Gothic',sans-serif;font-size:19px;margin:44px 0 6px;}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
 .chip{background:var(--chip);border:1px solid var(--border);padding:8px 16px;border-radius:20px;font-size:14px;}
-
-.testimonials{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
-.t-card{background:var(--surface);border:1px solid var(--border);padding:22px;border-radius:2px;}
-.t-card p{font-size:14.5px;margin:0 0 10px;}
-.t-card .who{color:var(--text-soft);font-size:12.5px;}
-
-.callout{background:var(--chip);border:1px solid var(--border);border-radius:3px;padding:30px 32px;}
-.callout h2{font-size:19px;}
-.callout p{color:var(--text-soft);font-size:14.5px;margin:0;}
-
-.cta-final{text-align:center;padding:60px 0 70px;}
+.ctable{max-width:820px;margin:0 auto;border:1px solid var(--border);border-radius:3px;background:var(--surface);}
+.chead,.crow{display:grid;grid-template-columns:1fr 1.6fr;}
+.chead{background:var(--chip);font-size:13px;font-weight:700;color:var(--text-soft);}
+.chead div,.crow div{padding:14px 18px;}
+.crow{border-top:1px solid var(--border);font-size:14.5px;}
+.cl{font-weight:700;}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;position:relative;}
+.step{background:var(--surface);border:1px solid var(--border);border-radius:3px;padding:20px 16px;text-align:center;}
+.sn{width:30px;height:30px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:14px;}
+.st{font-size:14.5px;font-weight:500;}
+.cta-final{text-align:center;}
 .cta-final h2{font-size:26px;}
-.cta-final p{color:var(--text-soft);max-width:38ch;margin:12px auto 26px;}
-
-footer{border-top:1px solid var(--border);padding:26px 0;color:var(--text-soft);font-size:13px;}
-
-@media (max-width:760px){
-  .hero-grid,.overview,.testimonials{grid-template-columns:1fr;}
-  .stat-grid{grid-template-columns:1fr;}
-  .stat-item{border-right:none;border-bottom:1px solid var(--border);}
-  .stat-item:last-child{border-bottom:none;}
-}
-.wrap:not(.callout) > h2,.wrap:not(.callout) > .section-sub{text-align:center;}
-.chips{justify-content:center;}
-.change-note{text-align:center;}
-.cta-note{max-width:520px;margin:0 auto;background:var(--surface);border:1px solid var(--border);border-top:4px solid var(--accent);border-radius:3px;padding:26px 24px;text-align:center;}
+.cta-final p{color:var(--text-soft);max-width:44ch;margin:12px auto 22px;}
+.cta-note{max-width:560px;margin:0 auto;background:var(--surface);border:1px solid var(--border);border-top:4px solid var(--accent);border-radius:3px;padding:26px 24px;}
 .cta-note svg{margin-bottom:8px;}
 .cta-note-t{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:18px;margin-bottom:6px;}
 .cta-note-d{color:var(--text-soft);font-size:14px;}
+.co{max-width:640px;margin:18px auto 0;border-top:1px solid var(--border);}
+.corow{display:flex;flex-wrap:wrap;padding:14px 0;border-bottom:1px solid var(--border);font-size:14px;}
+.cok{width:140px;color:var(--text-soft);}
+.co a{color:var(--teal);}
+footer{border-top:1px solid var(--border);padding:26px 0;color:var(--text-soft);font-size:13px;}
+@media (max-width:860px){.steps{grid-template-columns:1fr 1fr;}}
+@media (max-width:760px){
+  .hero-grid{grid-template-columns:1fr;}
+  .stat-grid{grid-template-columns:1fr;}
+  .stat-item{border-right:none;border-bottom:1px solid var(--border);}
+  .stat-item:last-child{border-bottom:none;}
+  .chead{display:none;}
+  .crow{grid-template-columns:1fr;}
+  .crow .cl{padding-bottom:0;}
+  .steps{grid-template-columns:1fr;}
+  .brand{font-size:16px;}
+  .change-box{padding:24px 16px;}
+}
+.sec-ic{width:48px;height:48px;border-radius:50%;background:var(--chip);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;}
+.sec-ic svg,.cl svg,.sn svg{fill:none;stroke:var(--teal);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.sec-ic svg{width:24px;height:24px;}
+.cl{display:flex;align-items:center;gap:10px;}
+.cl svg{width:22px;height:22px;flex:none;}
+.sn{width:52px;height:52px;background:var(--chip);color:inherit;margin:0 auto 8px;}
+.sn svg{width:24px;height:24px;}
+.sk{color:var(--accent);font-size:11.5px;font-weight:700;letter-spacing:.12em;margin-bottom:2px;}
+.blk.nx{margin-top:auto;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;}
+.tags .t{display:inline-block;background:var(--chip);border:1px solid var(--border);border-radius:14px;padding:1px 10px;font-size:12.5px;line-height:1.7;}
+.blk.do .t{border-color:var(--teal);background:transparent;}
+.kpis{display:flex;gap:8px;margin-bottom:10px;}
+.kpi{flex:1;background:var(--chip);border-radius:3px;padding:10px 8px;text-align:center;}
+.kpi b{display:block;font-family:'Zen Maru Gothic',sans-serif;font-size:24px;color:var(--accent);line-height:1.3;}
+.kpi b small{font-size:12px;color:var(--text);margin-left:2px;}
+.kpi b.sm{font-size:15px;line-height:1.7;padding:3px 0;}
+.kpi span{font-size:11.5px;color:var(--text-soft);line-height:1.5;display:block;}
+.mini{font-size:12px;color:var(--text-soft);margin:10px 0 5px;}
+.q{font-size:13px;border-left:3px solid var(--accent);padding-left:10px;margin:0 0 5px;line-height:1.7;}
+.voice{display:flex;gap:10px;margin-top:12px;background:var(--chip);padding:10px 12px;border-radius:2px;font-size:13.5px;line-height:1.75;}
+.voice svg{width:22px;height:22px;flex:none;margin-top:2px;}
+details{margin-top:8px;}
+summary{font-size:12.5px;color:var(--teal);cursor:pointer;}
+details .voice{margin-top:8px;}
 </style>
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -121,178 +154,131 @@ footer{border-top:1px solid var(--border);padding:26px 0;color:var(--text-soft);
 <header>
   <div class="wrap headbar">
     <div class="brand">UX-HATCH AI活用研修</div>
-    <a class="cta-btn" href="#contact">メールでご相談</a>
+    <a class="cta-btn" href="#contact" data-track="cta_header">オンライン相談について</a>
   </div>
 </header>
 
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <h1>介護現場が、生成AIと<br>少しずつ距離を縮めた2日間。</h1>
-      <p class="lead">介護施設・医療クリニック・児童発達支援施設。3つの現場、31名が受講した生成AI活用研修。アンケートに寄せられた生の声とデータから、現場にAIを届けるとどうなるかをそのままお伝えします。</p>
-      <a class="cta-btn" href="#contact">メールへの返信で相談する</a>
+      <h1>今ある業務・システムを活かし、<br>生成AIで法人全体の業務改善へ。</h1>
+      <p class="lead">介護・福祉現場の記録整理や文書作成などを題材に、職員が生成AIを実務で活用する方法を学ぶ研修です。</p>
+      <p class="lead">実際の研修事例や受講者の声を基に、法人ごとの業務内容・ICT環境に合わせた研修をご提案します。</p>
+      <div class="btn-row">
+        <a class="cta-btn" href="#cases" data-track="cta_hero_cases">研修事例・受講後の変化を見る</a>
+        <a class="cta-btn sub" href="#contact" data-track="cta_hero_consult">オンライン相談(15分程度)について</a>
+      </div>
     </div>
-    <div class="quote-card">
-      <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="var(--accent)" stroke-width="1.8" style="margin-bottom:10px;"><path d="M21 12c0 4.4-4 8-9 8-1.2 0-2.3-.2-3.3-.5L3 21l1.3-3.9C3.5 15.9 3 14 3 12c0-4.4 4-8 9-8s9 3.6 9 8z"/></svg>
-      <p>「小さなことからでも実践することでAIとの距離感を短くしていくことが大事だと感じました。」</p>
-      <div class="who">受講者(介護施設職員)</div>
+    <div class="navcard">
+      <div class="t">このページでご確認いただけること</div>
+      <ol>
+        <li><a href="#cases">医療・介護・福祉、3つの現場の研修事例</a></li>
+        <li><a href="#effects">受講後の変化(アンケート結果)</a></li>
+        <li><a href="#custom">貴法人に合わせた研修設計の例</a></li>
+      </ol>
     </div>
   </div>
 </section>
 
 <div class="stat-strip">
   <div class="wrap stat-grid">
-    <div class="stat-item">
-      <div class="stat-num">31名</div>
-      <div class="stat-label">受講者(全員が最終回まで参加)</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">3社</div>
-      <div class="stat-label">介護・医療事務・児童発達支援で導入</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">4.1<span style="font-size:16px;">/5</span></div>
-      <div class="stat-label">総合満足度(3社合算・加重平均)</div>
-    </div>
+    <div class="stat-item"><div class="stat-num">2法人・3つの現場</div><div class="stat-label">医療・介護・福祉領域での研修実績</div></div>
+    <div class="stat-item"><div class="stat-num">延べ31名</div><div class="stat-label">受講者数</div><div class="stat-cap">3つの研修の合計</div></div>
+    <div class="stat-item"><div class="stat-num">4.1<span style="font-size:16px;">/5点</span></div><div class="stat-label">総合満足度</div><div class="stat-cap">31名の加重平均(各研修の最終アンケート)</div></div>
   </div>
 </div>
 
-<section>
+<section id="cases" data-view="view_cases">
   <div class="wrap">
-    <h2>導入実績</h2>
-    <p class="section-sub">業種は異なりますが、いずれも「日々の記録・文書作成に時間がかかる」という共通の課題を持つ現場です。</p>
-    <div class="testimonials" style="grid-template-columns:repeat(3,1fr);">
-      <div class="t-card">
-        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="var(--teal)" stroke-width="1.7" style="margin-bottom:8px;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        <div class="who" style="font-size:13px;margin-bottom:6px;">介護施設</div>
-        <p style="font-size:20px;font-family:'Zen Maru Gothic',sans-serif;margin:0 0 6px;">13名・2日間</p>
-        <p style="font-size:13.5px;">総合満足度 3.5/5。支援計画書や記録作成へのAI活用を中心に実施。</p>
-      </div>
-      <div class="t-card">
-        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="var(--teal)" stroke-width="1.7" style="margin-bottom:8px;"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
-        <div class="who" style="font-size:13px;margin-bottom:6px;">医療事務クリニック</div>
-        <p style="font-size:20px;font-family:'Zen Maru Gothic',sans-serif;margin:0 0 6px;">13名・3日間</p>
-        <p style="font-size:13.5px;">総合満足度 4.4/5。メール対応や院内連絡の効率化を中心に実施。</p>
-      </div>
-      <div class="t-card">
-        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="var(--teal)" stroke-width="1.7" style="margin-bottom:8px;"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="8.5" y="14" width="7" height="7" rx="1.5"/></svg>
-        <div class="who" style="font-size:13px;margin-bottom:6px;">児童発達支援施設</div>
-        <p style="font-size:20px;font-family:'Zen Maru Gothic',sans-serif;margin:0 0 6px;">5名・3日間</p>
-        <p style="font-size:13.5px;">総合満足度 5.0/5。療育記録や保護者向け文書の作成を中心に実施。</p>
-      </div>
+    <div class="sec-ic"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h8"/></svg></div><h2>研修事例</h2>
+    <p class="section-sub">医療・介護・福祉の3つの現場で実施した研修です。テーマ・日数・人数は現場ごとに異なります。</p>
+    <div class="cases">
+<article class="case">
+  <div class="case-head"><svg viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.7"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><div><div class="case-tag">事例A</div><h3>介護施設</h3><div class="case-meta">13名受講・2日間</div></div></div>
+  <div class="blk"><div class="lb">研修テーマ</div><p>基本操作と、文書・記録・Excel業務への活用</p></div>
+  <div class="blk do"><div class="lb">実施したこと</div><div class="tags"><span class="t">生成AIの基本操作</span><span class="t">メール・文章作成</span><span class="t">議事録・会議記録</span><span class="t">Excel活用</span><span class="t">支援記録の文章化</span><span class="t">支援計画書のブラッシュアップ</span><span class="t">個人情報の匿名化</span></div></div>
+  <div class="blk res"><div class="lb">アンケートで確認できたこと</div>
+    <div class="kpis"><div class="kpi"><b>3.5<small>/5点</small></b><span>研修全体の満足度(13名)</span></div></div>
+    <div class="mini">2日目に「業務に使えそう」と選ばれた内容(上位3)</div><div class="tags"><span class="t">ExcelへのAI活用 9名</span><span class="t">簡単な表・集計表の作成 6名</span><span class="t">支援記録の文章化 5名</span></div>
+    <div class="mini">「印象に残った・役立った内容」の回答</div><div class="q">「エクセル関数をAIに相談できること」</div>
+    <div class="voice"><svg viewBox="0 0 16 16" fill="var(--teal)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><div>「先入観を持たずいろんな分野、事柄、業務で試してみたいし更に勉強したいと感じました。」</div></div><details><summary>ほかの声を読む</summary><div class="voice"><svg viewBox="0 0 16 16" fill="var(--teal)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><div>「これまで使っていなかったことを後悔するくらいとてもためになりました。」</div></div></details>
+  </div>
+  <div class="blk nx"><div class="lb">今後期待できる活用の方向性</div><p>支援計画書・支援記録の作成補助、Excelでの集計、メール・案内文の下書きなど</p></div>
+</article><article class="case">
+  <div class="case-head"><svg viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><div><div class="case-tag">事例B</div><h3>医療事務クリニック</h3><div class="case-meta">13名受講・3日間</div></div></div>
+  <div class="blk"><div class="lb">研修テーマ</div><p>Google Workspace×AIによる事務・院内業務</p></div>
+  <div class="blk do"><div class="lb">実施したこと</div><div class="tags"><span class="t">メール作成・返信(Gmail)</span><span class="t">文書・案内の作成</span><span class="t">院内連絡・情報共有</span><span class="t">予定・スケジュール管理</span><span class="t">データ集計</span><span class="t">NotebookLM・Gem</span></div></div>
+  <div class="blk res"><div class="lb">アンケートで確認できたこと</div>
+    <div class="kpis"><div class="kpi"><b>4.4<small>/5点</small></b><span>研修全体の満足度(13名)</span></div></div>
+    <div class="mini">2日目に「業務に使えそう」と選ばれた内容(上位3)</div><div class="tags"><span class="t">予定・スケジュール管理 8名</span><span class="t">文書・案内・資料作成 8名</span><span class="t">データ集計・振り返り 8名</span></div>
+    <div class="mini">「印象に残った・役立った内容」の回答</div><div class="q">「NotebookLMの活用方法とGemの作成方法」</div>
+    <div class="voice"><svg viewBox="0 0 16 16" fill="var(--teal)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><div>「業務で実際に活用できることが見つかったので、大変有意義な研修でした。」</div></div>
+  </div>
+  <div class="blk nx"><div class="lb">今後期待できる活用の方向性</div><p>メール対応・文書作成の下書き、予定調整、データ集計の整理など</p></div>
+</article><article class="case">
+  <div class="case-head"><svg viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.7"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="8.5" y="14" width="7" height="7" rx="1.5"/></svg><div><div class="case-tag">事例C</div><h3>児童発達支援施設</h3><div class="case-meta">5名受講・3日間</div></div></div>
+  <div class="blk"><div class="lb">研修テーマ</div><p>クラウド×AIによる療育記録・文書作成</p></div>
+  <div class="blk do"><div class="lb">実施したこと</div><div class="tags"><span class="t">療育記録の作成</span><span class="t">保護者向け文書</span><span class="t">事務作業全般・チラシ</span><span class="t">記録入力の補助</span><span class="t">音声記録の文字起こし</span><span class="t">Gem・NotebookLM・Gemini</span></div></div>
+  <div class="blk res"><div class="lb">アンケートで確認できたこと</div>
+    <div class="kpis"><div class="kpi"><b>5.0<small>/5点</small></b><span>研修全体の満足度(5名)</span></div></div>
+    <div class="mini">2日目に「業務に使えそう」と選ばれた内容(上位3)</div><div class="tags"><span class="t">療育記録の作成 5名</span><span class="t">保護者向け文書 2名</span><span class="t">事務作業全般 2名</span></div>
+    <div class="mini">「印象に残った・役立った内容」の回答</div><div class="q">「Gemの活用、スプレッドシート内でGeminiを使って関数など使えること。」</div>
+    <div class="voice"><svg viewBox="0 0 16 16" fill="var(--teal)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><div>「chatGPTやGeminiなど今までは知りたい情報があるときにその都度質問するといった活用方法だけだったので、知らなかった使い方を知れたり、こんなことまで出来るんだと思うことがあったり、とても勉強になることがいっぱいでAIってすごいなと改めて感じました。」</div></div><details><summary>ほかの声を読む</summary><div class="voice"><svg viewBox="0 0 16 16" fill="var(--teal)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><div>「今回は、現場より、管理職として、何か取り入れられることはないかという視点で参加をさせていただきました。現場とはまた違い、少し複雑な内容の業務も多く、回らないことはないがもう少し効率化できればと思っていたため、今回の研修を通して業務の質も上がりそうです。」</div></div></details>
+  </div>
+  <div class="blk nx"><div class="lb">今後期待できる活用の方向性</div><p>療育記録・保護者向け文書の作成補助、事務作業の整理など</p></div>
+</article>
+    </div>
+    <div class="banner">
+      <div><b>自法人の業務に近い事例はありましたか?</b><small>実際の研修事例をご紹介しながら、貴法人に合う内容をご案内します。</small></div>
+      <a class="cta-btn" href="#contact" data-track="cta_after_cases">「話を聞きたい」と返信して研修内容を確認する</a>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="wrap overview">
-  <div>
-    <h2>研修の概要</h2>
-    <p class="section-sub">介護施設の職員を対象に、日々の業務にAIをどう取り入れるかを段階的に体験する研修です。</p>
-    <p>個別支援計画書の作成、議事録・記録のまとめ、Excelを使った集計、案内文やチラシ作成など、介護現場で実際に発生する業務を題材にしています。座学だけでなく、その場でAIを触りながら「自分の業務ならどう使えるか」を考える時間を重視しました。</p>
-  </div>
-  <div>
-    <div style="color:var(--text-soft);font-size:12.5px;margin-bottom:10px;">実施内容の一例(抜粋)</div>
-    <div class="timeline">
-    <div class="tl-item" data-n="1"><div class="tl-title">第1回:業務の棚卸しとAIへの第一歩</div><div class="tl-desc">普段の業務内容を整理し、AIへの期待や不安を確認</div></div>
-    <div class="tl-item" data-n="2"><div class="tl-title">第2回:実践ワーク</div><div class="tl-desc">資料・案内物などの作成を実際に体験</div></div>
-    <div class="tl-item" data-n="3"><div class="tl-title">第3回:基本操作と議事録作成</div><div class="tl-desc">生成AIの基本操作、会議記録の作成に応用</div></div>
-    <div class="tl-item" data-n="4"><div class="tl-title">第4回:応用ワーク</div><div class="tl-desc">難易度を上げた実践課題に挑戦</div></div>
-    <div class="tl-item" data-n="5"><div class="tl-title">第5回(Day2):現場業務への落とし込み</div><div class="tl-desc">Excel活用、個別支援計画書、総合振り返り</div></div>
-    </div>
-  </div>
-  </div>
-</section>
-
-<section>
+<section id="effects" data-view="view_effects" style="padding-top:0;">
   <div class="wrap">
-    <h2>受講後の変化</h2>
-    <p class="section-sub">医療事務クリニック・児童発達支援施設(18名)に、研修前と比べてAI活用イメージがどう変わったか(5点満点)を尋ねました。</p>
+    <div class="sec-ic"><svg viewBox="0 0 24 24"><path d="M23 6l-9.5 9.5-5-5L1 18M17 6h6v6"/></svg></div><h2>受講後の変化</h2>
+    <p class="section-sub">アンケートで確認できた、受講者自身の評価です。</p>
     <div class="change-box">
-      <div style="display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;">
-        <div style="font-family:'Zen Maru Gothic',sans-serif;font-size:44px;color:var(--accent);white-space:nowrap;">100%</div>
-        <div style="color:var(--text-soft);font-size:14px;max-width:34ch;">が「イメージが変わった」(4点以上)と回答。うち13名は5点満点中5点でした。</div>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(9,1fr);gap:6px;margin:22px auto 0;max-width:420px;">
-        <!-- 18 respondents: 13 rated 5(dark), 5 rated 4(light) -->
-        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
-        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
-        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
-        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
-        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
-        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
-        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
-        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
-        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
-        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
-        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
-        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
-        <svg viewBox="0 0 16 16" width="100%" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
-        <svg viewBox="0 0 16 16" width="100%" fill="var(--teal)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
-        <svg viewBox="0 0 16 16" width="100%" fill="var(--teal)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
-        <svg viewBox="0 0 16 16" width="100%" fill="var(--teal)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
-        <svg viewBox="0 0 16 16" width="100%" fill="var(--teal)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
-        <svg viewBox="0 0 16 16" width="100%" fill="var(--teal)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg>
-      </div>
-      <div style="display:flex;justify-content:center;gap:18px;margin-top:12px;font-size:12.5px;color:var(--text-soft);">
-        <span>■ 5点(大きく変わった):13名</span><span>■ 4点:5名</span>
-      </div>
-      <div class="change-note">介護施設では、受講前後で期待度が上昇した方(5名)・変わらなかった方(6名)・下がった方(2名)が分かれ、現場や職種によって変化の実感には差があることも分かりました。</div>
+      <div class="big">18名全員<small>がAI活用イメージの変化を4点以上と評価</small></div>
+      <div class="ppl"><svg viewBox="0 0 16 16" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><svg viewBox="0 0 16 16" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><svg viewBox="0 0 16 16" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><svg viewBox="0 0 16 16" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><svg viewBox="0 0 16 16" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><svg viewBox="0 0 16 16" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><svg viewBox="0 0 16 16" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><svg viewBox="0 0 16 16" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><svg viewBox="0 0 16 16" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><svg viewBox="0 0 16 16" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><svg viewBox="0 0 16 16" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><svg viewBox="0 0 16 16" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><svg viewBox="0 0 16 16" fill="var(--accent)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><svg viewBox="0 0 16 16" fill="var(--teal)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><svg viewBox="0 0 16 16" fill="var(--teal)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><svg viewBox="0 0 16 16" fill="var(--teal)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><svg viewBox="0 0 16 16" fill="var(--teal)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><svg viewBox="0 0 16 16" fill="var(--teal)"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg></div>
+      <div class="legend"><span><i style="background:var(--accent)"></i>5点:13名</span><span><i style="background:var(--teal)"></i>4点:5名</span></div>
+      <p class="note">対象:医療事務クリニック・児童発達支援施設の受講者18名(5点満点)。「研修前と比べて、AI活用のイメージがどう変わったか」への評価です。業務の改善や習熟度を示すものではありません。</p>
     </div>
+    <div class="sub-h">受講者が挙げた活用アイデア</div>
+    <p class="section-sub" style="margin-bottom:20px;">受講者が挙げた活用アイデアや、「使えそう」と選んだ業務の一部です。実現した成果ではありません。</p>
+    <div class="chips"><span class="chip">記録・支援計画書の作成補助</span><span class="chip">保護者向け文書の作成</span><span class="chip">Excel・スプレッドシートの集計・関数</span><span class="chip">院内連絡・情報共有の整理</span><span class="chip">議事録・会議記録の作成</span><span class="chip">マニュアルの作成</span><span class="chip">予定・スケジュール管理</span><span class="chip">メール返信の作成</span><span class="chip">案内文・チラシの作成</span><span class="chip">音声記録の文字起こし・整理</span></div>
   </div>
 </section>
 
-<section>
+<section id="custom" data-view="view_custom" style="padding-top:0;">
   <div class="wrap">
-    <h2>現場で生まれた活用アイデア</h2>
-    <p class="section-sub">受講者自身の言葉で挙がった「AIを使って効率化したい業務」の一部です(3社合計20種類以上)。</p>
-    <div class="chips">
-      <span class="chip">個別支援計画書・療育記録の作成</span>
-      <span class="chip">議事録・会議記録の作成</span>
-      <span class="chip">Excel・スプレッドシートの集計</span>
-      <span class="chip">メール対応(Gmail)</span>
-      <span class="chip">案内文・チラシ・掲示物作成</span>
-      <span class="chip">音声データからの記録作成</span>
-      <span class="chip">保護者・利用者向け文書</span>
-      <span class="chip">マニュアル整理(NotebookLM)</span>
-      <span class="chip">院内・社内チャットでの情報共有</span>
-      <span class="chip">スケジュール・シフト管理</span>
-      <span class="chip">アンケート集計・分析</span>
-      <span class="chip">SNS投稿・画像作成</span>
+    <div class="sec-ic"><svg viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg></div><h2>貴法人の業務・ICT環境に合わせた生成AI研修をご提案</h2>
+    <p class="section-sub">AIの活用方法は、業務内容や導入済みシステム、職員の習熟度によって異なります。現在の業務フローや課題を踏まえ、研修内容をご提案します。</p>
+    <div class="ctable">
+      <div class="chead"><div>法人の現在の状況</div><div>研修で学ぶ・検討すること</div></div>
+      <div class="crow"><div class="cl"><svg viewBox="0 0 24 24"><path d="M12 21v-9M12 12C12 8.5 9.5 6 5.5 6 5.5 10 8 12 12 12zM12 15c0-3 2.5-5.5 6.5-5.5 0 3.5-2.5 5.5-6.5 5.5z"/></svg>AIの導入がこれから</div><div class="cr">基本操作、安全な利用方法、現場業務への活用</div></div><div class="crow"><div class="cl"><svg viewBox="0 0 24 24"><path d="M16 20v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 18.5V20M10 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM20 20v-1.5a3.5 3.5 0 0 0-2.5-3.35M15.5 4.2a3.5 3.5 0 0 1 0 6.6"/></svg>一部職員がAIを利用中</div><div class="cr">業務ごとの活用方法、職員間での活用イメージの共有</div></div><div class="crow"><div class="cl"><svg viewBox="0 0 24 24"><path d="M4 3h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM8 21h8M12 17v4"/></svg>介護記録システムを導入済み</div><div class="cr">既存システムと生成AIの使い分け、活用場面のシミュレーション</div></div><div class="crow"><div class="cl"><svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>複数施設を運営</div><div class="cr">共通業務と施設固有の業務を整理した研修設計</div></div>
     </div>
+    <p class="note" style="margin-left:auto;margin-right:auto;max-width:820px;">※設計例です。過去の研修ですべて実施したものではありません。システム連携や自動化の実装を約束するものではありません。</p>
   </div>
 </section>
 
-<section>
+<section style="padding-top:0;">
   <div class="wrap">
-    <h2>受講者の声</h2>
-    <p class="section-sub">アンケートの自由記述から、そのままご紹介します。</p>
-    <div class="testimonials">
-      <div class="t-card"><svg viewBox="0 0 16 16" width="26" height="26" fill="var(--teal)" style="margin-bottom:8px;"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><p>「これまで使っていなかったことを後悔するくらいとてもためになりました。」</p><div class="who">受講者(介護施設)</div></div>
-      <div class="t-card"><svg viewBox="0 0 16 16" width="26" height="26" fill="var(--accent)" style="margin-bottom:8px;"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><p>「知らなかった使い方を知れたり、こんなことまで出来るんだと思うことがいっぱいで、AIってすごいなと改めて感じました。」</p><div class="who">受講者(児童発達支援施設)</div></div>
-      <div class="t-card"><svg viewBox="0 0 16 16" width="26" height="26" fill="var(--teal)" style="margin-bottom:8px;"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><p>「業務で実際に活用できることが見つかったので、大変有意義な研修でした。」</p><div class="who">受講者(医療事務クリニック)</div></div>
-      <div class="t-card"><svg viewBox="0 0 16 16" width="26" height="26" fill="var(--accent)" style="margin-bottom:8px;"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><p>「占いやMBTIなど好きなものでAIの使い方を学べたので、難しいと思うことがなく楽しく学べました。」</p><div class="who">受講者(児童発達支援施設)</div></div>
-      <div class="t-card"><svg viewBox="0 0 16 16" width="26" height="26" fill="var(--teal)" style="margin-bottom:8px;"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><p>「後半はワークショップが多く、楽しく学ぶことができました。」</p><div class="who">受講者(医療事務クリニック)</div></div>
-      <div class="t-card"><svg viewBox="0 0 16 16" width="26" height="26" fill="var(--accent)" style="margin-bottom:8px;"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2 1H6a4 4 0 0 0-4 4v1h12v-1a4 4 0 0 0-4-4Z"/></svg><p>「chatgptとgeminiしか知らなかったが、色々な種類がある事を知りました。」</p><div class="who">受講者(介護施設)</div></div>
-    </div>
+    <div class="sec-ic"><svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"/></svg></div><h2>研修の進め方</h2>
+    <p class="section-sub">全体像の一例です。内容・日数は現場ごとに異なります(実績:2〜3日間)。</p>
+    <div class="steps"><div class="step"><div class="sn"><svg viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div><div class="sk">STEP 1</div><div class="st">現場の業務を整理する</div></div><div class="step"><div class="sn"><svg viewBox="0 0 24 24"><path d="M2 5h7a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H2zM22 5h-7a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h8z"/></svg></div><div class="sk">STEP 2</div><div class="st">生成AIの基本操作・注意点を学ぶ</div></div><div class="step"><div class="sn"><svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div><div class="sk">STEP 3</div><div class="st">身近な業務を題材に実践する</div></div><div class="step"><div class="sn"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/></svg></div><div class="sk">STEP 4</div><div class="st">自分の業務への活用方法を考える</div></div></div>
   </div>
 </section>
 
-<section>
-  <div class="wrap callout">
-    <h2>導入をご検討の企業様へ</h2>
-    <p>3社の結果を比べると、もともとPCやITツールに慣れている現場ほど満足度が高く出る傾向がありました。PC操作に不安のある方が多い現場では、「操作についていくのが大変だった」という声も一部にありましたが、そうした方からも「実践すれば時短になる」「活用の幅を知れた」といった前向きな感想が寄せられています。事前のPCスキル差を踏まえたグループ分けや進行ペースの調整を行うことで、より高い効果が期待できます。</p>
-  </div>
-</section>
-
-<section class="cta-final" id="contact">
+<section class="cta-final" id="contact" data-view="view_contact" style="background:var(--chip);">
   <div class="wrap">
-    <h2>貴社の現場に合わせた研修プランをご提案します</h2>
-    <p>職種・PCスキル・業務内容に応じて内容をカスタマイズできます。まずはお気軽にご相談ください。</p>
+    <h2>貴法人の業務に合わせた生成AI研修をご紹介します</h2>
+    <p>研修事例や受講者の変化をご紹介しながら、貴法人の業務・システム環境に合う研修内容をご案内します。15分程度のオンライン相談で承ります。</p>
     <div class="cta-note">
       <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18v12H3zM3 7l9 7 9-7"/></svg>
-      <div class="cta-note-t">ご案内のメールに、そのままご返信ください</div>
-      <div class="cta-note-d">研修の内容や進め方など、ご質問だけでも構いません。</div>
+      <div class="cta-note-t">「話を聞きたい」と返信して研修内容を確認する</div>
+      <div class="cta-note-d">ご案内のメールに、そのままご返信ください。</div>
     </div>
   </div>
 </section>
@@ -300,19 +286,21 @@ footer{border-top:1px solid var(--border);padding:26px 0;color:var(--text-soft);
 <section style="padding:50px 0 20px;">
   <div class="wrap">
     <h2 style="font-size:20px;">会社概要</h2>
-    <div style="border-top:1px solid var(--border);margin:18px auto 0;max-width:640px;">
-      <div style="display:flex;flex-wrap:wrap;padding:14px 0;border-bottom:1px solid var(--border);"><div style="width:140px;color:var(--text-soft);font-size:14px;">会社名</div><div style="font-size:14px;">株式会社UX-HATCH</div></div>
-      <div style="display:flex;flex-wrap:wrap;padding:14px 0;border-bottom:1px solid var(--border);"><div style="width:140px;color:var(--text-soft);font-size:14px;">代表</div><div style="font-size:14px;">山本博行</div></div>
-      <div style="display:flex;flex-wrap:wrap;padding:14px 0;border-bottom:1px solid var(--border);"><div style="width:140px;color:var(--text-soft);font-size:14px;">設立</div><div style="font-size:14px;">2020年7月</div></div>
-      <div style="display:flex;flex-wrap:wrap;padding:14px 0;border-bottom:1px solid var(--border);"><div style="width:140px;color:var(--text-soft);font-size:14px;">所在地</div><div style="font-size:14px;">〒542-0076<br>大阪市中央区難波5-1-60 なんばスカイオ27F</div></div>
-      <div style="display:flex;flex-wrap:wrap;padding:14px 0;"><div style="width:140px;color:var(--text-soft);font-size:14px;">会社HP</div><div style="font-size:14px;"><a href="https://hatch8.co.jp/" target="_blank" rel="noopener" style="color:var(--teal);">https://hatch8.co.jp/</a></div></div>
-    </div>
+    <div class="co"><div class="corow"><div class="cok">会社名</div><div>株式会社UX-HATCH</div></div><div class="corow"><div class="cok">代表</div><div>山本博行</div></div><div class="corow"><div class="cok">設立</div><div>2020年7月</div></div><div class="corow"><div class="cok">所在地</div><div>〒542-0076<br>大阪市中央区難波5-1-60 なんばスカイオ27F</div></div><div class="corow"><div class="cok">会社HP</div><div><a href="https://hatch8.co.jp/" target="_blank" rel="noopener">https://hatch8.co.jp/</a></div></div></div>
   </div>
 </section>
 
-<footer>
-  <div class="wrap">株式会社UX-HATCH / 生成AI活用研修 実施報告</div>
-</footer>
+<footer><div class="wrap">株式会社UX-HATCH / 生成AI活用研修 実施報告</div></footer>
 
+<script>
+(function(){
+  function ev(n){try{if(window.clarity&&n){window.clarity('event',n);}}catch(e){}}
+  document.addEventListener('click',function(e){var t=e.target.closest('[data-track]');if(t){ev(t.getAttribute('data-track'));}});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){ev(en.target.getAttribute('data-view'));io.unobserve(en.target);}});},{threshold:0.25});
+    document.querySelectorAll('[data-view]').forEach(function(el){io.observe(el);});
+  }
+})();
+</script>
 </body>
 </html>
